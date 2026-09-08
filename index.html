@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portfólio | Karla Lucinara</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="menu">
+
+            <h2 class="logo">Karla<span>.</span></h2>
+
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+
+    <!-- INÍCIO -->
+
+    <section id="inicio" class="inicio">
+
+        <div class="inicio-conteudo">
+
+            <p class="ola">Olá, seja bem-vindo(a)!</p>
+
+            <h1>
+                Eu sou
+                <span>Karla Lucinara</span>
+            </h1>
+
+            <h2>Estudante de Engenharia de Software</h2>
+
+            <p>
+                Apaixonada por tecnologia, programação, inteligência artificial,
+                inovação e desenvolvimento de software.
+            </p>
+
+            <a href="#sobre" class="botao">
+                Conheça meu portfólio
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SOBRE MIM -->
+
+    <section id="sobre" class="secao">
+
+        <h2 class="titulo">Sobre Mim</h2>
+
+        <div class="card">
+
+            <p>
+                Meu nome é Karla Lucinara e sou estudante do curso de
+                Bacharelado em Engenharia de Software.
+            </p>
+
+            <p>
+                Tenho interesse pela área de tecnologia e busco desenvolver
+                meus conhecimentos em programação, desenvolvimento web,
+                banco de dados, inteligência artificial e novas tecnologias.
+            </p>
+
+            <p>
+                Durante minha graduação, venho realizando projetos acadêmicos
+                que ajudam no desenvolvimento do raciocínio lógico,
+                da criatividade e da capacidade de resolver problemas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMAÇÃO -->
+
+    <section id="formacao" class="secao secao-alternativa">
+
+        <h2 class="titulo">Formação</h2>
+
+        <div class="formacao-container">
+
+            <div class="card">
+
+                <h3>🎓 Engenharia de Software</h3>
+
+                <p>
+                    <strong>Instituição:</strong>
+                    Centro Universitário Internacional UNINTER
+                </p>
+
+                <p>
+                    <strong>Curso:</strong>
+                    Bacharelado em Engenharia de Software
+                </p>
+
+                <p>
+                    <strong>Situação:</strong>
+                    Cursando
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>💻 Conhecimentos</h3>
+
+                <p>HTML e CSS</p>
+                <p>JavaScript</p>
+                <p>Python</p>
+                <p>Banco de Dados</p>
+                <p>Engenharia de Software</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PORTFÓLIO -->
+
+    <section id="portfolio" class="secao">
+
+        <h2 class="titulo">Portfólio</h2>
+
+        <p class="subtitulo">
+            Alguns projetos desenvolvidos durante meus estudos.
+        </p>
+
+        <div class="projetos">
+
+
+            <div class="projeto">
+
+                <div class="icone-projeto">
+                    📦
+                </div>
+
+                <h3>Sistema de Estoque</h3>
+
+                <p>
+                    Projeto desenvolvido para realizar entrada e saída
+                    de produtos e auxiliar no controle de estoque.
+                </p>
+
+                <span>Python</span>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div class="icone-projeto">
+                    🎮
+                </div>
+
+                <h3>Jogo 2D</h3>
+
+                <p>
+                    Projeto acadêmico de desenvolvimento de um jogo
+                    utilizando programação em Python.
+                </p>
+
+                <span>Python</span>
+
+            </div>
+
+
+            <div class="projeto">
+
+                <div class="icone-projeto">
+                    🌐
+                </div>
+
+                <h3>Portfólio Web</h3>
+
+                <p>
+                    Desenvolvimento de um site pessoal utilizando
+                    tecnologias da Web.
+                </p>
+
+                <span>HTML • CSS • JavaScript</span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTATO -->
+
+    <section id="contato" class="secao secao-alternativa">
+
+        <h2 class="titulo">Contato</h2>
+
+        <p class="subtitulo">
+            Entre em contato preenchendo o formulário.
+        </p>
+
+        <form id="formContato">
+
+            <label for="nome">Nome</label>
+
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome"
+                required
+            >
+
+
+            <label for="email">E-mail</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+
+            <label for="mensagem">Mensagem</label>
+
+            <textarea
+                id="mensagem"
+                rows="6"
+                placeholder="Digite sua mensagem"
+                required
+            ></textarea>
+
+
+            <button type="submit">
+                Enviar mensagem
+            </button>
+
+        </form>
+
+
+        <p id="mensagemSucesso"></p>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            © 2026 Karla Lucinara |
+            Portfólio Acadêmico
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
