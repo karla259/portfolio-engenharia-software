@@ -1,440 +1,444 @@
-/* CONFIGURAÇÕES GERAIS */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #0f0f17;
-    color: #ffffff;
-    line-height: 1.6;
-}
-
-
-/* MENU */
-
-header {
-    background-color: #151521;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
-}
-
-.menu {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    font-size: 30px;
-    color: #ffffff;
-}
-
-.logo span {
-    color: #a855f7;
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-.menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.menu a:hover {
-    color: #c084fc;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* INÍCIO */
+    <title>Karla Lucinara | Engenharia de Software</title>
 
-.inicio {
-    min-height: 90vh;
+    <meta name="description"
+        content="Portfólio acadêmico de Karla Lucinara, estudante de Engenharia de Software.">
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    <link rel="stylesheet" href="estilo.css">
+</head>
 
-    text-align: center;
+<body>
 
-    padding: 60px 20px;
+    <!-- MENU -->
+    <header>
+        <nav class="navbar">
 
-    background:
-        radial-gradient(circle at center,
-        #35135c,
-        #171020 55%,
-        #0f0f17 100%);
-}
+            <a href="#inicio" class="logo">
+                Karla<span>.</span>
+            </a>
 
-.inicio-conteudo {
-    max-width: 800px;
-}
+            <ul class="menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#formacao">Formação</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
 
-.ola {
-    color: #c084fc;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
+        </nav>
+    </header>
 
-.inicio h1 {
-    font-size: 55px;
-    margin-bottom: 10px;
-}
 
-.inicio h1 span {
-    color: #c084fc;
-}
+    <!-- INÍCIO -->
+    <main>
 
-.inicio h2 {
-    font-size: 26px;
-    color: #dddddd;
-    margin-bottom: 20px;
-}
+        <section id="inicio" class="hero">
 
-.inicio p {
-    font-size: 18px;
-    color: #cccccc;
-}
+            <div class="hero-conteudo">
 
-.botao {
-    display: inline-block;
+                <span class="saudacao">👋 Olá, seja bem-vindo(a)!</span>
 
-    margin-top: 30px;
-    padding: 14px 30px;
+                <h1>
+                    Eu sou
+                    <span>Karla Lucinara</span>
+                </h1>
 
-    background-color: #9333ea;
-    color: white;
+                <h2>Estudante de Engenharia de Software</h2>
 
-    text-decoration: none;
-    font-weight: bold;
+                <p>
+                    Desenvolvendo projetos e aprimorando meus conhecimentos
+                    em programação, desenvolvimento web, banco de dados
+                    e novas tecnologias.
+                </p>
 
-    border-radius: 30px;
+                <div class="botoes">
 
-    transition: 0.3s;
-}
+                    <a href="#portfolio" class="btn principal">
+                        Ver meus projetos
+                    </a>
 
-.botao:hover {
-    background-color: #a855f7;
-    transform: translateY(-3px);
-}
+                    <a href="https://github.com/karla259"
+                       target="_blank"
+                       class="btn secundario">
+                        GitHub
+                    </a>
 
+                </div>
 
-/* SEÇÕES */
+            </div>
 
-.secao {
-    padding: 90px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
+            <div class="hero-card">
+                <div class="codigo">
 
-.secao-alternativa {
-    max-width: 100%;
-    padding-left: max(20px, calc((100% - 1200px) / 2));
-    padding-right: max(20px, calc((100% - 1200px) / 2));
-    background-color: #151521;
-}
+                    <p><span>const</span> desenvolvedora = {</p>
 
-.titulo {
-    text-align: center;
+                    <p>&nbsp;&nbsp;nome:
+                        <strong>"Karla Lucinara"</strong>,
+                    </p>
 
-    font-size: 38px;
+                    <p>&nbsp;&nbsp;curso:
+                        <strong>"Engenharia de Software"</strong>,
+                    </p>
 
-    margin-bottom: 15px;
+                    <p>&nbsp;&nbsp;foco:
+                        <strong>"Tecnologia"</strong>,
+                    </p>
 
-    color: #c084fc;
-}
+                    <p>&nbsp;&nbsp;status:
+                        <strong>"Sempre aprendendo 🚀"</strong>
+                    </p>
 
-.subtitulo {
-    text-align: center;
+                    <p>};</p>
 
-    margin-bottom: 45px;
+                </div>
+            </div>
 
-    color: #bbbbbb;
+        </section>
 
-    font-size: 18px;
-}
 
+        <!-- SOBRE -->
+        <section id="sobre" class="secao">
 
-/* CARDS */
+            <div class="titulo-secao">
+                <span>Conheça um pouco</span>
+                <h2>Sobre mim</h2>
+            </div>
 
-.card {
-    background-color: #1c1c2a;
+            <div class="sobre-card">
 
-    padding: 30px;
+                <div class="sobre-icone">
+                    👩‍💻
+                </div>
 
-    border-radius: 15px;
+                <div class="sobre-texto">
 
-    border: 1px solid #353545;
+                    <p>
+                        Sou estudante de
+                        <strong>Engenharia de Software</strong>
+                        e tenho grande interesse por tecnologia,
+                        programação, inteligência artificial,
+                        inovação e desenvolvimento de software.
+                    </p>
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-}
+                    <p>
+                        Durante minha formação, venho desenvolvendo
+                        projetos acadêmicos para colocar em prática
+                        os conhecimentos adquiridos e construir
+                        experiência na área de tecnologia.
+                    </p>
 
-.card p {
-    margin-bottom: 12px;
-    color: #dddddd;
-}
+                    <p>
+                        Meu objetivo é continuar evoluindo como
+                        desenvolvedora, aprendendo novas tecnologias
+                        e criando soluções cada vez melhores.
+                    </p>
 
-.card h3 {
-    color: #c084fc;
-    margin-bottom: 20px;
-}
+                </div>
 
+            </div>
 
-/* FORMAÇÃO */
+        </section>
 
-.formacao-container {
-    display: grid;
 
-    grid-template-columns: repeat(2, 1fr);
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="secao">
 
-    gap: 25px;
-}
+            <div class="titulo-secao">
+                <span>Minha trajetória</span>
+                <h2>Formação</h2>
+            </div>
 
+            <div class="formacao-card">
 
-/* PORTFÓLIO */
+                <div class="formacao-icone">
+                    🎓
+                </div>
 
-.projetos {
-    display: grid;
+                <div>
+                    <span class="status">CURSANDO</span>
 
-    grid-template-columns: repeat(3, 1fr);
+                    <h3>Bacharelado em Engenharia de Software</h3>
 
-    gap: 25px;
-}
+                    <p>Centro Universitário Internacional UNINTER</p>
 
-.projeto {
-    background-color: #1c1c2a;
+                    <p class="descricao">
+                        Formação voltada para desenvolvimento de sistemas,
+                        engenharia de software, programação, banco de dados,
+                        aplicações web e demais tecnologias relacionadas
+                        ao desenvolvimento de software.
+                    </p>
+                </div>
 
-    padding: 30px;
+            </div>
 
-    border-radius: 15px;
+        </section>
 
-    border: 1px solid #353545;
 
-    text-align: center;
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="secao">
 
-    transition: 0.3s;
-}
+            <div class="titulo-secao">
+                <span>Conhecimentos</span>
+                <h2>Tecnologias e Ferramentas</h2>
+            </div>
 
-.projeto:hover {
-    transform: translateY(-8px);
+            <div class="skills">
 
-    border-color: #9333ea;
+                <div class="skill">
+                    <span>🐍</span>
+                    <h3>Python</h3>
+                </div>
 
-    box-shadow: 0 10px 30px rgba(147, 51, 234, 0.25);
-}
+                <div class="skill">
+                    <span>🌐</span>
+                    <h3>HTML5</h3>
+                </div>
 
-.icone-projeto {
-    font-size: 50px;
+                <div class="skill">
+                    <span>🎨</span>
+                    <h3>CSS3</h3>
+                </div>
 
-    margin-bottom: 20px;
-}
+                <div class="skill">
+                    <span>⚡</span>
+                    <h3>JavaScript</h3>
+                </div>
 
-.projeto h3 {
-    font-size: 23px;
+                <div class="skill">
+                    <span>🗄️</span>
+                    <h3>Banco de Dados</h3>
+                </div>
 
-    margin-bottom: 15px;
+                <div class="skill">
+                    <span>🔀</span>
+                    <h3>Git</h3>
+                </div>
 
-    color: #c084fc;
-}
+                <div class="skill">
+                    <span>🐙</span>
+                    <h3>GitHub</h3>
+                </div>
 
-.projeto p {
-    color: #cccccc;
+                <div class="skill">
+                    <span>💻</span>
+                    <h3>VS Code</h3>
+                </div>
 
-    margin-bottom: 20px;
-}
+            </div>
 
-.projeto span {
-    display: inline-block;
+        </section>
 
-    background-color: #31154d;
 
-    color: #d8b4fe;
+        <!-- PROJETOS -->
+        <section id="portfolio" class="secao">
 
-    padding: 7px 15px;
+            <div class="titulo-secao">
+                <span>Projetos acadêmicos</span>
+                <h2>Meu Portfólio</h2>
+            </div>
 
-    border-radius: 20px;
+            <div class="projetos">
 
-    font-size: 14px;
-}
 
+                <!-- PROJETO 1 -->
+                <article class="projeto-card">
 
-/* FORMULÁRIO */
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">📦</span>
+                        <span class="numero">01</span>
+                    </div>
 
-form {
-    max-width: 700px;
+                    <h3>Sistema de Controle de Estoque</h3>
 
-    margin: 40px auto 0;
+                    <p>
+                        Sistema desenvolvido em Python para realizar
+                        entrada e saída de produtos, validação de estoque
+                        e registro do histórico de movimentações.
+                    </p>
 
-    display: flex;
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Lógica</span>
+                    </div>
 
-    flex-direction: column;
+                    <a
+                        href="https://github.com/karla259/controle----estoque"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver projeto →
+                    </a>
 
-    background-color: #1c1c2a;
+                </article>
 
-    padding: 35px;
 
-    border-radius: 15px;
+                <!-- PROJETO 2 -->
+                <article class="projeto-card">
 
-    border: 1px solid #353545;
-}
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">🎮</span>
+                        <span class="numero">02</span>
+                    </div>
 
-form label {
-    margin-bottom: 8px;
+                    <h3>Jogo 2D</h3>
 
-    font-weight: bold;
+                    <p>
+                        Projeto acadêmico desenvolvido utilizando
+                        programação em Python, trabalhando lógica,
+                        interação e elementos de um jogo 2D.
+                    </p>
 
-    color: #d8b4fe;
-}
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Game Dev</span>
+                    </div>
 
-form input,
-form textarea {
-    width: 100%;
+                    <a
+                        href="https://github.com/karla259?tab=repositories"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver projetos →
+                    </a>
 
-    margin-bottom: 20px;
+                </article>
 
-    padding: 14px;
 
-    border-radius: 8px;
+                <!-- PROJETO 3 -->
+                <article class="projeto-card">
 
-    border: 1px solid #44445a;
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">🌐</span>
+                        <span class="numero">03</span>
+                    </div>
 
-    background-color: #101018;
+                    <h3>Portfólio Web</h3>
 
-    color: white;
+                    <p>
+                        Site pessoal desenvolvido para apresentar
+                        minha formação, habilidades, projetos e
+                        evolução durante o curso de Engenharia de Software.
+                    </p>
 
-    font-size: 16px;
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
 
-    outline: none;
-}
+                    <a
+                        href="https://karla259.github.io/portfolio-karla/"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver site →
+                    </a>
 
-form input:focus,
-form textarea:focus {
-    border-color: #a855f7;
-}
+                </article>
 
-form textarea {
-    resize: vertical;
-}
 
-form button {
-    border: none;
+            </div>
 
-    padding: 14px;
+        </section>
 
-    border-radius: 8px;
 
-    background-color: #9333ea;
+        <!-- OBJETIVO -->
+        <section class="secao">
 
-    color: white;
+            <div class="objetivo">
 
-    font-size: 17px;
+                <span>🚀</span>
 
-    font-weight: bold;
+                <div>
 
-    cursor: pointer;
+                    <h2>Objetivo profissional</h2>
 
-    transition: 0.3s;
-}
+                    <p>
+                        Busco desenvolver meus conhecimentos em Engenharia
+                        de Software, programação e desenvolvimento de sistemas,
+                        criando projetos práticos e adquirindo experiência
+                        para construir minha carreira na área de tecnologia.
+                    </p>
 
-form button:hover {
-    background-color: #a855f7;
-}
+                </div>
 
-#mensagemSucesso {
-    text-align: center;
+            </div>
 
-    margin-top: 20px;
+        </section>
 
-    font-weight: bold;
 
-    color: #c084fc;
-}
+        <!-- CONTATO -->
+        <section id="contato" class="secao contato">
 
+            <div class="titulo-secao">
+                <span>Vamos conectar?</span>
+                <h2>Contato</h2>
+            </div>
 
-/* RODAPÉ */
+            <p class="contato-texto">
+                Conheça meus projetos e acompanhe minha evolução
+                profissional através do GitHub.
+            </p>
 
-footer {
-    text-align: center;
+            <div class="contato-links">
 
-    padding: 30px 20px;
+                <a
+                    href="https://github.com/karla259"
+                    target="_blank"
+                    class="contato-card">
 
-    background-color: #09090e;
+                    <span>🐙</span>
 
-    color: #aaaaaa;
+                    <div>
+                        <small>GitHub</small>
+                        <strong>@karla259</strong>
+                    </div>
 
-    border-top: 1px solid #292938;
-}
+                </a>
 
+                <a
+                    href="https://karla259.github.io/portfolio-karla/"
+                    target="_blank"
+                    class="contato-card">
 
-/* CELULAR */
+                    <span>🌐</span>
 
-@media (max-width: 850px) {
+                    <div>
+                        <small>Portfólio</small>
+                        <strong>Meu site</strong>
+                    </div>
 
-    .menu {
-        flex-direction: column;
-        gap: 15px;
-    }
+                </a>
 
-    .menu ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
+            </div>
 
-    .inicio h1 {
-        font-size: 40px;
-    }
+        </section>
 
-    .inicio h2 {
-        font-size: 21px;
-    }
+    </main>
 
-    .formacao-container,
-    .projetos {
-        grid-template-columns: 1fr;
-    }
 
-}
+    <!-- RODAPÉ -->
+    <footer>
 
+        <p>
+            Desenvolvido por
+            <strong>Karla Lucinara</strong>
+            • Engenharia de Software
+        </p>
 
-/* CELULARES PEQUENOS */
+        <p class="copyright">
+            © <span id="ano"></span> • Portfólio Acadêmico
+        </p>
 
-@media (max-width: 500px) {
+    </footer>
 
-    .inicio h1 {
-        font-size: 33px;
-    }
 
-    .titulo {
-        font-size: 30px;
-    }
+    <script src="script.js"></script>
 
-    .menu a {
-        font-size: 14px;
-    }
+</body>
 
-    .secao {
-        padding: 65px 15px;
-    }
-
-}
+</html>
