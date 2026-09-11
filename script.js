@@ -50,3 +50,32 @@ estilo.innerHTML = `
 `;
 
 document.head.appendChild(estilo);
+
+// ==================================
+// ANIMAÇÃO AO ROLAR A PÁGINA
+// ==================================
+
+const elementosReveal = document.querySelectorAll(
+    "section, .projeto"
+);
+
+elementosReveal.forEach((elemento) => {
+    elemento.classList.add("reveal");
+});
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("ativo");
+            }
+        });
+    },
+    {
+        threshold: 0.15
+    }
+);
+
+elementosReveal.forEach((elemento) => {
+    observer.observe(elemento);
+});
