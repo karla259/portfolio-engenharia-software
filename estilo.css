@@ -159,35 +159,40 @@ header {
     align-items: center;
     justify-content: center;
 
-    padding: 13px 24px;
-    border-radius: 10px;
+    padding: 14px 28px;
+    border-radius: 12px;
 
-    font-weight: bold;
-    transition: 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+
+    color: white;
+    border: 1px solid rgba(168, 85, 247, 0.5);
+
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.btn.principal {
-    background: linear-gradient(
-        135deg,
-        #9f4cff,
-        #c873ff
-    );
-
-    box-shadow: 0 8px 30px rgba(172, 82, 255, 0.25);
-}
-
-.btn.principal:hover {
+.btn:hover {
     transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.35);
 }
 
-.btn.secundario {
-    border: 1px solid #424553;
-    background: #121520;
+.btn-principal {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7, #c084fc);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    box-shadow:
+        0 8px 22px rgba(139, 92, 246, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.18);
 }
 
-.btn.secundario:hover {
-    border-color: #a65cff;
-    color: #d5a3ff;
+.btn-principal:hover {
+    background: linear-gradient(135deg, #7c3aed, #9333ea, #a855f7);
+    box-shadow:
+        0 12px 30px rgba(139, 92, 246, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 
