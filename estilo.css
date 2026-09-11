@@ -685,3 +685,69 @@ footer strong {
 
 }
 
+
+/* =========================
+   BOTÕES PROFISSIONAIS
+========================= */
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.5);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: rgba(168, 85, 247, 0.14);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.30);
+}
+
+/* Botão principal: Ver meus projetos */
+.btn-principal {
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #a855f7,
+        #6366f1
+    );
+
+    border: 1px solid rgba(255, 255, 255, 0.20);
+
+    box-shadow:
+        0 8px 25px rgba(139, 92, 246, 0.30);
+}
+
+.btn-principal:hover {
+    background: linear-gradient(
+        135deg,
+        #a855f7,
+        #8b5cf6,
+        #6366f1
+    );
+
+    box-shadow:
+        0 10px 30px rgba(168, 85, 247, 0.45);
+}
