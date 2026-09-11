@@ -1,444 +1,682 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:
+        radial-gradient(circle at 50% 10%, #321654 0%, transparent 30%),
+        #090b12;
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(9, 11, 18, 0.88);
+    backdrop-filter: blur(14px);
+
+    border-bottom: 1px solid rgba(174, 103, 255, 0.12);
+}
+
+.navbar {
+    max-width: 1150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 20px 25px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: #b868ff;
+}
+
+.menu {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.menu a {
+    color: #c7c7d1;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c981ff;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 88vh;
+    max-width: 1150px;
+    margin: auto;
+
+    padding: 100px 25px 70px;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.saudacao {
+    display: inline-block;
+    color: #ce9bff;
+
+    background: rgba(165, 91, 255, 0.1);
+    border: 1px solid rgba(187, 113, 255, 0.25);
+
+    padding: 7px 15px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(43px, 6vw, 72px);
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+}
+
+.hero h1 span {
+    background: linear-gradient(
+        90deg,
+        #ffffff,
+        #d899ff,
+        #a95dff
+    );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero h2 {
+    color: #c997ff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    max-width: 620px;
+    color: #aeb0bd;
+    font-size: 17px;
+}
+
+.botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 24px;
+    border-radius: 10px;
+
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn.principal {
+    background: linear-gradient(
+        135deg,
+        #9f4cff,
+        #c873ff
+    );
+
+    box-shadow: 0 8px 30px rgba(172, 82, 255, 0.25);
+}
+
+.btn.principal:hover {
+    transform: translateY(-3px);
+}
+
+.btn.secundario {
+    border: 1px solid #424553;
+    background: #121520;
+}
+
+.btn.secundario:hover {
+    border-color: #a65cff;
+    color: #d5a3ff;
+}
+
+
+/* =========================
+   CARD CÓDIGO
+========================= */
+
+.hero-card {
+    border: 1px solid rgba(192, 119, 255, 0.25);
+
+    background: linear-gradient(
+        145deg,
+        rgba(24, 27, 40, 0.95),
+        rgba(13, 15, 24, 0.95)
+    );
+
+    border-radius: 20px;
+    padding: 35px;
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.35),
+        0 0 45px rgba(150, 62, 255, 0.08);
+}
+
+.codigo {
+    font-family: Consolas, monospace;
+    font-size: 14px;
+}
+
+.codigo p {
+    color: #aeb3c6;
+    margin: 9px 0;
+}
+
+.codigo span {
+    color: #c67cff;
+}
+
+.codigo strong {
+    color: #70e5db;
+    font-weight: normal;
+}
+
+
+/* =========================
+   SEÇÕES
+========================= */
+
+.secao {
+    max-width: 1150px;
+    margin: auto;
+
+    padding: 90px 25px;
+}
+
+.titulo-secao {
+    margin-bottom: 42px;
+}
+
+.titulo-secao span {
+    color: #b56cff;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.titulo-secao h2 {
+    font-size: 37px;
+    margin-top: 4px;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.sobre-card {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 35px;
+
+    background: #11141e;
+
+    border: 1px solid #232735;
+    border-radius: 20px;
+
+    padding: 40px;
+}
+
+.sobre-icone {
+    width: 105px;
+    height: 105px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 22px;
+
+    background: linear-gradient(
+        135deg,
+        #7d38c8,
+        #c16fff
+    );
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    font-size: 50px;
+}
 
-    <title>Karla Lucinara | Engenharia de Software</title>
+.sobre-texto p {
+    color: #b7bac6;
+    margin-bottom: 16px;
+}
 
-    <meta name="description"
-        content="Portfólio acadêmico de Karla Lucinara, estudante de Engenharia de Software.">
+.sobre-texto strong {
+    color: #e1baff;
+}
 
-    <link rel="stylesheet" href="estilo.css">
-</head>
 
-<body>
+/* =========================
+   FORMAÇÃO
+========================= */
 
-    <!-- MENU -->
-    <header>
-        <nav class="navbar">
+.formacao-card {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
 
-            <a href="#inicio" class="logo">
-                Karla<span>.</span>
-            </a>
+    padding: 38px;
 
-            <ul class="menu">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre mim</a></li>
-                <li><a href="#formacao">Formação</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#portfolio">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
+    background: #11141e;
+    border: 1px solid #272a39;
 
-        </nav>
-    </header>
+    border-radius: 18px;
+}
 
+.formacao-icone {
+    font-size: 45px;
+}
 
-    <!-- INÍCIO -->
-    <main>
+.status {
+    color: #c782ff;
 
-        <section id="inicio" class="hero">
+    background: rgba(176, 88, 255, 0.1);
+    border: 1px solid rgba(176, 88, 255, 0.25);
 
-            <div class="hero-conteudo">
+    padding: 5px 10px;
+    border-radius: 8px;
 
-                <span class="saudacao">👋 Olá, seja bem-vindo(a)!</span>
+    font-size: 11px;
+    font-weight: bold;
+}
 
-                <h1>
-                    Eu sou
-                    <span>Karla Lucinara</span>
-                </h1>
+.formacao-card h3 {
+    font-size: 24px;
+    margin: 14px 0 3px;
+}
 
-                <h2>Estudante de Engenharia de Software</h2>
+.formacao-card > div > p {
+    color: #a8abb8;
+}
 
-                <p>
-                    Desenvolvendo projetos e aprimorando meus conhecimentos
-                    em programação, desenvolvimento web, banco de dados
-                    e novas tecnologias.
-                </p>
+.formacao-card .descricao {
+    margin-top: 15px;
+    max-width: 800px;
+}
 
-                <div class="botoes">
 
-                    <a href="#portfolio" class="btn principal">
-                        Ver meus projetos
-                    </a>
+/* =========================
+   SKILLS
+========================= */
 
-                    <a href="https://github.com/karla259"
-                       target="_blank"
-                       class="btn secundario">
-                        GitHub
-                    </a>
+.skills {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
 
-                </div>
+.skill {
+    background: #11141e;
+    border: 1px solid #282c3a;
 
-            </div>
+    border-radius: 15px;
 
-            <div class="hero-card">
-                <div class="codigo">
+    text-align: center;
+    padding: 28px 15px;
 
-                    <p><span>const</span> desenvolvedora = {</p>
+    transition: 0.3s;
+}
 
-                    <p>&nbsp;&nbsp;nome:
-                        <strong>"Karla Lucinara"</strong>,
-                    </p>
+.skill span {
+    font-size: 32px;
+}
 
-                    <p>&nbsp;&nbsp;curso:
-                        <strong>"Engenharia de Software"</strong>,
-                    </p>
+.skill h3 {
+    font-size: 15px;
+    margin-top: 8px;
+}
 
-                    <p>&nbsp;&nbsp;foco:
-                        <strong>"Tecnologia"</strong>,
-                    </p>
+.skill:hover {
+    transform: translateY(-6px);
 
-                    <p>&nbsp;&nbsp;status:
-                        <strong>"Sempre aprendendo 🚀"</strong>
-                    </p>
+    border-color: #a359ef;
 
-                    <p>};</p>
+    box-shadow: 0 15px 40px rgba(165, 74, 255, 0.12);
+}
 
-                </div>
-            </div>
 
-        </section>
+/* =========================
+   PROJETOS
+========================= */
 
+.projetos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
 
-        <!-- SOBRE -->
-        <section id="sobre" class="secao">
+.projeto-card {
+    display: flex;
+    flex-direction: column;
 
-            <div class="titulo-secao">
-                <span>Conheça um pouco</span>
-                <h2>Sobre mim</h2>
-            </div>
+    min-height: 360px;
 
-            <div class="sobre-card">
+    padding: 30px;
 
-                <div class="sobre-icone">
-                    👩‍💻
-                </div>
+    background: linear-gradient(
+        145deg,
+        #151824,
+        #0f111a
+    );
 
-                <div class="sobre-texto">
+    border: 1px solid #2a2d3d;
+    border-radius: 19px;
 
-                    <p>
-                        Sou estudante de
-                        <strong>Engenharia de Software</strong>
-                        e tenho grande interesse por tecnologia,
-                        programação, inteligência artificial,
-                        inovação e desenvolvimento de software.
-                    </p>
+    transition: 0.35s;
+}
 
-                    <p>
-                        Durante minha formação, venho desenvolvendo
-                        projetos acadêmicos para colocar em prática
-                        os conhecimentos adquiridos e construir
-                        experiência na área de tecnologia.
-                    </p>
+.projeto-card:hover {
+    transform: translateY(-8px);
 
-                    <p>
-                        Meu objetivo é continuar evoluindo como
-                        desenvolvedora, aprendendo novas tecnologias
-                        e criando soluções cada vez melhores.
-                    </p>
+    border-color: #ac5cff;
 
-                </div>
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 30px rgba(151, 66, 255, 0.1);
+}
 
-            </div>
+.projeto-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        </section>
+    margin-bottom: 25px;
+}
 
+.icone-projeto {
+    font-size: 35px;
+}
 
-        <!-- FORMAÇÃO -->
-        <section id="formacao" class="secao">
+.numero {
+    color: #4f5364;
+    font-size: 13px;
+    font-weight: bold;
+}
 
-            <div class="titulo-secao">
-                <span>Minha trajetória</span>
-                <h2>Formação</h2>
-            </div>
+.projeto-card h3 {
+    font-size: 21px;
+    margin-bottom: 15px;
+}
 
-            <div class="formacao-card">
+.projeto-card p {
+    color: #a8abb8;
+    font-size: 14px;
 
-                <div class="formacao-icone">
-                    🎓
-                </div>
+    flex-grow: 1;
+}
 
-                <div>
-                    <span class="status">CURSANDO</span>
+.tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
 
-                    <h3>Bacharelado em Engenharia de Software</h3>
+    margin: 23px 0;
+}
 
-                    <p>Centro Universitário Internacional UNINTER</p>
+.tags span {
+    color: #d7b0ff;
 
-                    <p class="descricao">
-                        Formação voltada para desenvolvimento de sistemas,
-                        engenharia de software, programação, banco de dados,
-                        aplicações web e demais tecnologias relacionadas
-                        ao desenvolvimento de software.
-                    </p>
-                </div>
+    background: rgba(169, 81, 255, 0.11);
 
-            </div>
+    padding: 5px 10px;
+    border-radius: 7px;
 
-        </section>
+    font-size: 11px;
+}
 
+.link-projeto {
+    color: #ce8fff;
+    font-weight: bold;
+    font-size: 14px;
+}
 
-        <!-- HABILIDADES -->
-        <section id="habilidades" class="secao">
+.link-projeto:hover {
+    color: white;
+}
 
-            <div class="titulo-secao">
-                <span>Conhecimentos</span>
-                <h2>Tecnologias e Ferramentas</h2>
-            </div>
 
-            <div class="skills">
+/* =========================
+   OBJETIVO
+========================= */
 
-                <div class="skill">
-                    <span>🐍</span>
-                    <h3>Python</h3>
-                </div>
+.objetivo {
+    display: flex;
+    gap: 25px;
 
-                <div class="skill">
-                    <span>🌐</span>
-                    <h3>HTML5</h3>
-                </div>
+    padding: 38px;
 
-                <div class="skill">
-                    <span>🎨</span>
-                    <h3>CSS3</h3>
-                </div>
+    border-radius: 20px;
 
-                <div class="skill">
-                    <span>⚡</span>
-                    <h3>JavaScript</h3>
-                </div>
+    border: 1px solid rgba(185, 102, 255, 0.23);
 
-                <div class="skill">
-                    <span>🗄️</span>
-                    <h3>Banco de Dados</h3>
-                </div>
+    background:
+        linear-gradient(
+            135deg,
+            rgba(158, 64, 255, 0.12),
+            rgba(26, 30, 45, 0.9)
+        );
+}
 
-                <div class="skill">
-                    <span>🔀</span>
-                    <h3>Git</h3>
-                </div>
+.objetivo > span {
+    font-size: 40px;
+}
 
-                <div class="skill">
-                    <span>🐙</span>
-                    <h3>GitHub</h3>
-                </div>
+.objetivo h2 {
+    margin-bottom: 10px;
+}
 
-                <div class="skill">
-                    <span>💻</span>
-                    <h3>VS Code</h3>
-                </div>
+.objetivo p {
+    color: #b7bac7;
+}
 
-            </div>
 
-        </section>
+/* =========================
+   CONTATO
+========================= */
 
+.contato {
+    text-align: center;
+}
 
-        <!-- PROJETOS -->
-        <section id="portfolio" class="secao">
+.contato .titulo-secao {
+    text-align: center;
+}
 
-            <div class="titulo-secao">
-                <span>Projetos acadêmicos</span>
-                <h2>Meu Portfólio</h2>
-            </div>
+.contato-texto {
+    color: #aeb0bd;
+    max-width: 600px;
+    margin: -20px auto 35px;
+}
 
-            <div class="projetos">
+.contato-links {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
 
+.contato-card {
+    width: 270px;
 
-                <!-- PROJETO 1 -->
-                <article class="projeto-card">
+    display: flex;
+    align-items: center;
+    gap: 18px;
 
-                    <div class="projeto-topo">
-                        <span class="icone-projeto">📦</span>
-                        <span class="numero">01</span>
-                    </div>
+    text-align: left;
 
-                    <h3>Sistema de Controle de Estoque</h3>
+    padding: 20px;
 
-                    <p>
-                        Sistema desenvolvido em Python para realizar
-                        entrada e saída de produtos, validação de estoque
-                        e registro do histórico de movimentações.
-                    </p>
+    background: #131620;
+    border: 1px solid #292d3c;
 
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>Lógica</span>
-                    </div>
+    border-radius: 14px;
 
-                    <a
-                        href="https://github.com/karla259/controle----estoque"
-                        target="_blank"
-                        class="link-projeto">
-                        Ver projeto →
-                    </a>
+    transition: 0.3s;
+}
 
-                </article>
+.contato-card:hover {
+    border-color: #ad64ef;
+    transform: translateY(-4px);
+}
 
+.contato-card > span {
+    font-size: 30px;
+}
 
-                <!-- PROJETO 2 -->
-                <article class="projeto-card">
+.contato-card small {
+    color: #8b8e9b;
+    display: block;
+}
 
-                    <div class="projeto-topo">
-                        <span class="icone-projeto">🎮</span>
-                        <span class="numero">02</span>
-                    </div>
+.contato-card strong {
+    color: #e4c3ff;
+}
 
-                    <h3>Jogo 2D</h3>
 
-                    <p>
-                        Projeto acadêmico desenvolvido utilizando
-                        programação em Python, trabalhando lógica,
-                        interação e elementos de um jogo 2D.
-                    </p>
+/* =========================
+   RODAPÉ
+========================= */
 
-                    <div class="tags">
-                        <span>Python</span>
-                        <span>Game Dev</span>
-                    </div>
+footer {
+    border-top: 1px solid #202330;
 
-                    <a
-                        href="https://github.com/karla259?tab=repositories"
-                        target="_blank"
-                        class="link-projeto">
-                        Ver projetos →
-                    </a>
+    text-align: center;
 
-                </article>
+    padding: 35px 20px;
 
+    color: #858995;
 
-                <!-- PROJETO 3 -->
-                <article class="projeto-card">
+    font-size: 13px;
+}
 
-                    <div class="projeto-topo">
-                        <span class="icone-projeto">🌐</span>
-                        <span class="numero">03</span>
-                    </div>
+footer strong {
+    color: #c585fa;
+}
 
-                    <h3>Portfólio Web</h3>
+.copyright {
+    margin-top: 5px;
+}
 
-                    <p>
-                        Site pessoal desenvolvido para apresentar
-                        minha formação, habilidades, projetos e
-                        evolução durante o curso de Engenharia de Software.
-                    </p>
 
-                    <div class="tags">
-                        <span>HTML</span>
-                        <span>CSS</span>
-                        <span>JavaScript</span>
-                    </div>
+/* =========================
+   CELULAR / TABLET
+========================= */
 
-                    <a
-                        href="https://karla259.github.io/portfolio-karla/"
-                        target="_blank"
-                        class="link-projeto">
-                        Ver site →
-                    </a>
+@media (max-width: 900px) {
 
-                </article>
+    .menu {
+        display: none;
+    }
 
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
 
-            </div>
+    .hero-card {
+        max-width: 600px;
+    }
 
-        </section>
+    .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    .projetos {
+        grid-template-columns: 1fr;
+    }
 
-        <!-- OBJETIVO -->
-        <section class="secao">
+    .sobre-card {
+        grid-template-columns: 1fr;
+    }
 
-            <div class="objetivo">
+}
 
-                <span>🚀</span>
 
-                <div>
+@media (max-width: 550px) {
 
-                    <h2>Objetivo profissional</h2>
+    .hero {
+        min-height: auto;
+    }
 
-                    <p>
-                        Busco desenvolver meus conhecimentos em Engenharia
-                        de Software, programação e desenvolvimento de sistemas,
-                        criando projetos práticos e adquirindo experiência
-                        para construir minha carreira na área de tecnologia.
-                    </p>
+    .hero h1 {
+        font-size: 43px;
+    }
 
-                </div>
+    .skills {
+        grid-template-columns: 1fr 1fr;
+    }
 
-            </div>
+    .sobre-card,
+    .formacao-card,
+    .objetivo {
+        padding: 25px;
+    }
 
-        </section>
+    .formacao-card,
+    .objetivo {
+        flex-direction: column;
+    }
 
+}
 
-        <!-- CONTATO -->
-        <section id="contato" class="secao contato">
-
-            <div class="titulo-secao">
-                <span>Vamos conectar?</span>
-                <h2>Contato</h2>
-            </div>
-
-            <p class="contato-texto">
-                Conheça meus projetos e acompanhe minha evolução
-                profissional através do GitHub.
-            </p>
-
-            <div class="contato-links">
-
-                <a
-                    href="https://github.com/karla259"
-                    target="_blank"
-                    class="contato-card">
-
-                    <span>🐙</span>
-
-                    <div>
-                        <small>GitHub</small>
-                        <strong>@karla259</strong>
-                    </div>
-
-                </a>
-
-                <a
-                    href="https://karla259.github.io/portfolio-karla/"
-                    target="_blank"
-                    class="contato-card">
-
-                    <span>🌐</span>
-
-                    <div>
-                        <small>Portfólio</small>
-                        <strong>Meu site</strong>
-                    </div>
-
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- RODAPÉ -->
-    <footer>
-
-        <p>
-            Desenvolvido por
-            <strong>Karla Lucinara</strong>
-            • Engenharia de Software
-        </p>
-
-        <p class="copyright">
-            © <span id="ano"></span> • Portfólio Acadêmico
-        </p>
-
-    </footer>
-
-
-    <script src="script.js"></script>
-
-</body>
-
-</html>
