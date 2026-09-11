@@ -5,23 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Portfólio | Karla Lucinara</title>
+    <title>Karla Lucinara | Engenharia de Software</title>
+
+    <meta name="description"
+        content="Portfólio acadêmico de Karla Lucinara, estudante de Engenharia de Software.">
 
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
+    <!-- MENU -->
     <header>
-        <nav class="menu">
+        <nav class="navbar">
 
-            <h2 class="logo">Karla<span>.</span></h2>
+            <a href="#inicio" class="logo">
+                Karla<span>.</span>
+            </a>
 
-            <ul>
+            <ul class="menu">
                 <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre Mim</a></li>
+                <li><a href="#sobre">Sobre mim</a></li>
                 <li><a href="#formacao">Formação</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#portfolio">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
 
@@ -30,245 +37,401 @@
 
 
     <!-- INÍCIO -->
+    <main>
 
-    <section id="inicio" class="inicio">
+        <section id="inicio" class="hero">
 
-        <div class="inicio-conteudo">
+            <div class="hero-conteudo">
 
-            <p class="ola">Olá, seja bem-vindo(a)!</p>
+                <span class="saudacao">👋 Olá, seja bem-vindo(a)!</span>
 
-            <h1>
-                Eu sou
-                <span>Karla Lucinara</span>
-            </h1>
+                <h1>
+                    Eu sou
+                    <span>Karla Lucinara</span>
+                </h1>
 
-            <h2>Estudante de Engenharia de Software</h2>
-
-            <p>
-                Apaixonada por tecnologia, programação, inteligência artificial,
-                inovação e desenvolvimento de software.
-            </p>
-
-            <a href="#sobre" class="botao">
-                Conheça meu portfólio
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- SOBRE MIM -->
-
-    <section id="sobre" class="secao">
-
-        <h2 class="titulo">Sobre Mim</h2>
-
-        <div class="card">
-
-            <p>
-                Meu nome é Karla Lucinara e sou estudante do curso de
-                Bacharelado em Engenharia de Software.
-            </p>
-
-            <p>
-                Tenho interesse pela área de tecnologia e busco desenvolver
-                meus conhecimentos em programação, desenvolvimento web,
-                banco de dados, inteligência artificial e novas tecnologias.
-            </p>
-
-            <p>
-                Durante minha graduação, venho realizando projetos acadêmicos
-                que ajudam no desenvolvimento do raciocínio lógico,
-                da criatividade e da capacidade de resolver problemas.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- FORMAÇÃO -->
-
-    <section id="formacao" class="secao secao-alternativa">
-
-        <h2 class="titulo">Formação</h2>
-
-        <div class="formacao-container">
-
-            <div class="card">
-
-                <h3>🎓 Engenharia de Software</h3>
+                <h2>Estudante de Engenharia de Software</h2>
 
                 <p>
-                    <strong>Instituição:</strong>
-                    Centro Universitário Internacional UNINTER
+                    Desenvolvendo projetos e aprimorando meus conhecimentos
+                    em programação, desenvolvimento web, banco de dados
+                    e novas tecnologias.
                 </p>
 
-                <p>
-                    <strong>Curso:</strong>
-                    Bacharelado em Engenharia de Software
-                </p>
+                <div class="botoes">
 
-                <p>
-                    <strong>Situação:</strong>
-                    Cursando
-                </p>
+                    <a href="#portfolio" class="btn principal">
+                        Ver meus projetos
+                    </a>
+
+                    <a href="https://github.com/karla259"
+                       target="_blank"
+                       class="btn secundario">
+                        GitHub
+                    </a>
+
+                </div>
 
             </div>
 
+            <div class="hero-card">
+                <div class="codigo">
 
-            <div class="card">
+                    <p><span>const</span> desenvolvedora = {</p>
 
-                <h3>💻 Conhecimentos</h3>
+                    <p>&nbsp;&nbsp;nome:
+                        <strong>"Karla Lucinara"</strong>,
+                    </p>
 
-                <p>HTML e CSS</p>
-                <p>JavaScript</p>
-                <p>Python</p>
-                <p>Banco de Dados</p>
-                <p>Engenharia de Software</p>
+                    <p>&nbsp;&nbsp;curso:
+                        <strong>"Engenharia de Software"</strong>,
+                    </p>
+
+                    <p>&nbsp;&nbsp;foco:
+                        <strong>"Tecnologia"</strong>,
+                    </p>
+
+                    <p>&nbsp;&nbsp;status:
+                        <strong>"Sempre aprendendo 🚀"</strong>
+                    </p>
+
+                    <p>};</p>
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- SOBRE -->
+        <section id="sobre" class="secao">
+
+            <div class="titulo-secao">
+                <span>Conheça um pouco</span>
+                <h2>Sobre mim</h2>
+            </div>
+
+            <div class="sobre-card">
+
+                <div class="sobre-icone">
+                    👩‍💻
+                </div>
+
+                <div class="sobre-texto">
+
+                    <p>
+                        Sou estudante de
+                        <strong>Engenharia de Software</strong>
+                        e tenho grande interesse por tecnologia,
+                        programação, inteligência artificial,
+                        inovação e desenvolvimento de software.
+                    </p>
+
+                    <p>
+                        Durante minha formação, venho desenvolvendo
+                        projetos acadêmicos para colocar em prática
+                        os conhecimentos adquiridos e construir
+                        experiência na área de tecnologia.
+                    </p>
+
+                    <p>
+                        Meu objetivo é continuar evoluindo como
+                        desenvolvedora, aprendendo novas tecnologias
+                        e criando soluções cada vez melhores.
+                    </p>
+
+                </div>
 
             </div>
 
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- PORTFÓLIO -->
+        <!-- FORMAÇÃO -->
+        <section id="formacao" class="secao">
 
-    <section id="portfolio" class="secao">
+            <div class="titulo-secao">
+                <span>Minha trajetória</span>
+                <h2>Formação</h2>
+            </div>
 
-        <h2 class="titulo">Portfólio</h2>
+            <div class="formacao-card">
 
-        <p class="subtitulo">
-            Alguns projetos desenvolvidos durante meus estudos.
-        </p>
-
-        <div class="projetos">
-
-
-            <div class="projeto">
-
-                <div class="icone-projeto">
-                    📦
+                <div class="formacao-icone">
+                    🎓
                 </div>
 
-                <h3>Sistema de Estoque</h3>
+                <div>
+                    <span class="status">CURSANDO</span>
 
-                <p>
-                    Projeto desenvolvido para realizar entrada e saída
-                    de produtos e auxiliar no controle de estoque.
-                </p>
+                    <h3>Bacharelado em Engenharia de Software</h3>
 
-                <span>Python</span>
-                
-               <a href="https://github.com/karla259/controle----estoque" target="_blank">
-    Ver projeto
-</a>
+                    <p>Centro Universitário Internacional UNINTER</p>
+
+                    <p class="descricao">
+                        Formação voltada para desenvolvimento de sistemas,
+                        engenharia de software, programação, banco de dados,
+                        aplicações web e demais tecnologias relacionadas
+                        ao desenvolvimento de software.
+                    </p>
                 </div>
-
-
-            <div class="projeto">
-
-                <div class="icone-projeto">
-                    🎮
-                </div>
-
-                <h3>Jogo 2D</h3>
-
-                <p>
-                    Projeto acadêmico de desenvolvimento de um jogo
-                    utilizando programação em Python.
-                </p>
-
-                <span>Python</span>
 
             </div>
 
+        </section>
 
-            <div class="projeto">
 
-                <div class="icone-projeto">
-                    🌐
+        <!-- HABILIDADES -->
+        <section id="habilidades" class="secao">
+
+            <div class="titulo-secao">
+                <span>Conhecimentos</span>
+                <h2>Tecnologias e Ferramentas</h2>
+            </div>
+
+            <div class="skills">
+
+                <div class="skill">
+                    <span>🐍</span>
+                    <h3>Python</h3>
                 </div>
 
-                <h3>Portfólio Web</h3>
+                <div class="skill">
+                    <span>🌐</span>
+                    <h3>HTML5</h3>
+                </div>
 
-                <p>
-                    Desenvolvimento de um site pessoal utilizando
-                    tecnologias da Web.
-                </p>
+                <div class="skill">
+                    <span>🎨</span>
+                    <h3>CSS3</h3>
+                </div>
 
-                <span>HTML • CSS • JavaScript</span>
+                <div class="skill">
+                    <span>⚡</span>
+                    <h3>JavaScript</h3>
+                </div>
+
+                <div class="skill">
+                    <span>🗄️</span>
+                    <h3>Banco de Dados</h3>
+                </div>
+
+                <div class="skill">
+                    <span>🔀</span>
+                    <h3>Git</h3>
+                </div>
+
+                <div class="skill">
+                    <span>🐙</span>
+                    <h3>GitHub</h3>
+                </div>
+
+                <div class="skill">
+                    <span>💻</span>
+                    <h3>VS Code</h3>
+                </div>
 
             </div>
 
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- CONTATO -->
+        <!-- PROJETOS -->
+        <section id="portfolio" class="secao">
 
-    <section id="contato" class="secao secao-alternativa">
+            <div class="titulo-secao">
+                <span>Projetos acadêmicos</span>
+                <h2>Meu Portfólio</h2>
+            </div>
 
-        <h2 class="titulo">Contato</h2>
-
-        <p class="subtitulo">
-            Entre em contato preenchendo o formulário.
-        </p>
-
-        <form id="formContato">
-
-            <label for="nome">Nome</label>
-
-            <input
-                type="text"
-                id="nome"
-                placeholder="Digite seu nome"
-                required
-            >
+            <div class="projetos">
 
 
-            <label for="email">E-mail</label>
+                <!-- PROJETO 1 -->
+                <article class="projeto-card">
 
-            <input
-                type="email"
-                id="email"
-                placeholder="Digite seu e-mail"
-                required
-            >
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">📦</span>
+                        <span class="numero">01</span>
+                    </div>
+
+                    <h3>Sistema de Controle de Estoque</h3>
+
+                    <p>
+                        Sistema desenvolvido em Python para realizar
+                        entrada e saída de produtos, validação de estoque
+                        e registro do histórico de movimentações.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Lógica</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/karla259/controle----estoque"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver projeto →
+                    </a>
+
+                </article>
 
 
-            <label for="mensagem">Mensagem</label>
+                <!-- PROJETO 2 -->
+                <article class="projeto-card">
 
-            <textarea
-                id="mensagem"
-                rows="6"
-                placeholder="Digite sua mensagem"
-                required
-            ></textarea>
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">🎮</span>
+                        <span class="numero">02</span>
+                    </div>
+
+                    <h3>Jogo 2D</h3>
+
+                    <p>
+                        Projeto acadêmico desenvolvido utilizando
+                        programação em Python, trabalhando lógica,
+                        interação e elementos de um jogo 2D.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Game Dev</span>
+                    </div>
+
+                    <a
+                        href="https://github.com/karla259?tab=repositories"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver projetos →
+                    </a>
+
+                </article>
 
 
-            <button type="submit">
-                Enviar mensagem
-            </button>
+                <!-- PROJETO 3 -->
+                <article class="projeto-card">
 
-        </form>
+                    <div class="projeto-topo">
+                        <span class="icone-projeto">🌐</span>
+                        <span class="numero">03</span>
+                    </div>
+
+                    <h3>Portfólio Web</h3>
+
+                    <p>
+                        Site pessoal desenvolvido para apresentar
+                        minha formação, habilidades, projetos e
+                        evolução durante o curso de Engenharia de Software.
+                    </p>
+
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+
+                    <a
+                        href="https://karla259.github.io/portfolio-karla/"
+                        target="_blank"
+                        class="link-projeto">
+                        Ver site →
+                    </a>
+
+                </article>
 
 
-        <p id="mensagemSucesso"></p>
+            </div>
 
-    </section>
+        </section>
 
 
+        <!-- OBJETIVO -->
+        <section class="secao">
+
+            <div class="objetivo">
+
+                <span>🚀</span>
+
+                <div>
+
+                    <h2>Objetivo profissional</h2>
+
+                    <p>
+                        Busco desenvolver meus conhecimentos em Engenharia
+                        de Software, programação e desenvolvimento de sistemas,
+                        criando projetos práticos e adquirindo experiência
+                        para construir minha carreira na área de tecnologia.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTATO -->
+        <section id="contato" class="secao contato">
+
+            <div class="titulo-secao">
+                <span>Vamos conectar?</span>
+                <h2>Contato</h2>
+            </div>
+
+            <p class="contato-texto">
+                Conheça meus projetos e acompanhe minha evolução
+                profissional através do GitHub.
+            </p>
+
+            <div class="contato-links">
+
+                <a
+                    href="https://github.com/karla259"
+                    target="_blank"
+                    class="contato-card">
+
+                    <span>🐙</span>
+
+                    <div>
+                        <small>GitHub</small>
+                        <strong>@karla259</strong>
+                    </div>
+
+                </a>
+
+                <a
+                    href="https://karla259.github.io/portfolio-karla/"
+                    target="_blank"
+                    class="contato-card">
+
+                    <span>🌐</span>
+
+                    <div>
+                        <small>Portfólio</small>
+                        <strong>Meu site</strong>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
     <footer>
 
         <p>
-            © 2026 Karla Lucinara |
-            Portfólio Acadêmico
+            Desenvolvido por
+            <strong>Karla Lucinara</strong>
+            • Engenharia de Software
+        </p>
+
+        <p class="copyright">
+            © <span id="ano"></span> • Portfólio Acadêmico
         </p>
 
     </footer>
@@ -279,3 +442,5 @@
 </body>
 
 </html>
+
+   
