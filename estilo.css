@@ -1152,3 +1152,17 @@ footer strong {
         min-height: 95px;
     }
 }
+#mensagemStatus {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#mensagemStatus.sucesso {
+    color: #78ffb0;
+}
+
+#mensagemStatus.erro {
+    color: #ff7b8b;
+}
