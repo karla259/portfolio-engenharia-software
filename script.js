@@ -47,3 +47,29 @@ elementos.forEach((elemento) => {
   observer.observe(elemento);
 
 });
+
+const formContato = document.getElementById("formContato");
+const mensagemStatus = document.getElementById("mensagemStatus");
+
+if (formContato && mensagemStatus) {
+    formContato.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mensagem = document.getElementById("mensagem").value.trim();
+
+        if (nome === "" || email === "" || mensagem === "") {
+            mensagemStatus.textContent = "⚠️ Preencha todos os campos antes de enviar.";
+            mensagemStatus.className = "erro";
+            return;
+        }
+
+        mensagemStatus.textContent =
+            "✅ Mensagem enviada com sucesso! Obrigada pelo contato.";
+
+        mensagemStatus.className = "sucesso";
+
+        formContato.reset();
+    });
+}
