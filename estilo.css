@@ -1082,3 +1082,25 @@ footer strong {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(168, 85, 247, 0.45);
 }
+
+/* FORÇAR GITHUB E PORTFÓLIO LADO A LADO */
+.contato-links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 20px !important;
+    width: 100% !important;
+}
+
+.contato-links .contato-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    grid-column: auto !important;
+    box-sizing: border-box !important;
+}
+
+/* No celular ficam um embaixo do outro */
+@media (max-width: 700px) {
+    .contato-links {
+        grid-template-columns: 1fr !important;
+    }
+}
