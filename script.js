@@ -52,7 +52,9 @@ const formContato = document.getElementById("formContato");
 const mensagemStatus = document.getElementById("mensagemStatus");
 
 if (formContato && mensagemStatus) {
-    formContato.addEventListener("submit", function (event) {
+
+    formContato.addEventListener("submit", async function (event) {
+
         event.preventDefault();
 
         const nome = document.getElementById("nome").value.trim();
@@ -60,16 +62,66 @@ if (formContato && mensagemStatus) {
         const mensagem = document.getElementById("mensagem").value.trim();
 
         if (nome === "" || email === "" || mensagem === "") {
-            mensagemStatus.textContent = "⚠️ Preencha todos os campos antes de enviar.";
+
+            mensagemStatus.textContent =
+                "⚠️ Preencha todos os campos.";
+
             mensagemStatus.className = "erro";
+
             return;
         }
 
-        mensagemStatus.textContent =
-            "✅ Mensagem enviada com sucesso! Obrigada pelo contato.";
+        mensagemStatus.textContent = "⏳ Enviando mensagem...";
+        mensagemStatus.className = "";
 
-        mensagemStatus.className = "sucesso";
+        const destino = "karlasoares397@gmail.com";
 
-        formContato.reset();
+        const endpoint =
+            "https://" + "formsubmit.co/ajax/" + destino;
+
+        try {
+
+            const resposta = await fetch(endpoint, {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+
+                body: JSON.stringify({
+
+                    name: nome,
+
+                    email: email,
+
+                    message: mensagem,
+
+                    _subject: "Nova mensagem do meu portfólio"
+
+                })
+
+            });
+
+            if (!resposta.ok) {
+                throw new Error("Erro ao enviar");
+            }
+
+            mensagemStatus.textContent =
+                "✅ Mensagem enviada com sucesso! Obrigada pelo contato.";
+
+            mensagemStatus.className = "sucesso";
+
+            formContato.reset();
+
+        } catch (erro) {
+
+            mensagemStatus.textContent =
+                "❌ Não foi possível enviar. Tente novamente.";
+
+            mensagemStatus.className = "erro";
+        }
+
     });
 }
