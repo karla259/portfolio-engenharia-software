@@ -555,27 +555,26 @@ header {
 }
 
 .contato-links {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .contato-card {
-    flex: 1 1 240px;
-    min-width: 220px;
-}
+    width: 100%;
+    min-width: 0;
 
     display: flex;
     align-items: center;
     gap: 18px;
 
     text-align: left;
-
     padding: 20px;
 
     background: #131620;
-    border: 1px solid #292d3c;
+    border-radius: 20px;
+}
 
     border-radius: 14px;
 
