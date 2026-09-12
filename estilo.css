@@ -992,3 +992,82 @@ footer strong {
     width: 100%;
     margin-top: 8px;
 }
+/* ===== FORMULÁRIO DE CONTATO - AJUSTE FINAL ===== */
+
+.formulario-contato {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 30px;
+    background: rgba(20, 20, 35, 0.75);
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.formulario-contato h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.formulario-contato > p {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #cfcfe3;
+}
+
+.formulario-contato .campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.formulario-contato label {
+    margin-bottom: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 15px;
+
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: white !important;
+
+    border: 1px solid rgba(168, 85, 247, 0.55) !important;
+    border-radius: 10px;
+
+    font-size: 15px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.formulario-contato input::placeholder,
+.formulario-contato textarea::placeholder {
+    color: #aaaabc;
+}
+
+.formulario-contato input:focus,
+.formulario-contato textarea:focus {
+    border-color: #c084fc !important;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.35);
+}
+
+.formulario-contato textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.formulario-contato button {
+    width: 100%;
+    margin-top: 5px;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
