@@ -556,13 +556,15 @@ header {
 
 .contato-links {
     display: flex;
-    justify-content: center;
-    gap: 18px;
+    flex-direction: row;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
 .contato-card {
-    width: 270px;
+    flex: 1 1 240px;
+    min-width: 220px;
+}
 
     display: flex;
     align-items: center;
