@@ -70,7 +70,24 @@ if (formContato && mensagemStatus) {
 
             return;
         }
+        
+        const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+if (!emailValido.test(email)) {
+    mensagemStatus.textContent =
+        "⚠️ Digite um e-mail válido.";
+
+    mensagemStatus.className = "erro";
+
+    return;
+}
+const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+if (!emailValido.test(email)) {
+    mensagemStatus.textContent = "⚠️ Digite um e-mail válido.";
+    mensagemStatus.className = "erro";
+    return;
+}
         mensagemStatus.textContent = "⏳ Enviando mensagem...";
         mensagemStatus.className = "";
 
