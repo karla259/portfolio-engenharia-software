@@ -429,27 +429,48 @@
 </a>
 
 </div>
-    <form id="formContato">
+   <form id="formContato">
 
     <h3>Entre em contato</h3>
     <p>Preencha o formulário abaixo para enviar uma mensagem.</p>
 
-    <input type="text" id="nome" name="nome"
-       placeholder="Digite seu nome" required>
+    <div class="campo">
+        <label for="nome">Nome</label>
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required>
+    </div>
 
-<input type="email" id="email" name="email"
-       placeholder="Digite seu e-mail" required>
+    <div class="campo">
+        <label for="email">E-mail</label>
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            required>
+    </div>
 
-<textarea id="mensagem" name="mensagem" rows="5"
-          placeholder="Digite sua mensagem" required></textarea>
+    <div class="campo">
+        <label for="mensagem">Mensagem</label>
+        <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Digite sua mensagem"
+            required></textarea>
+    </div>
 
-        <button type="submit" class="btn btn-principal">
-            Enviar mensagem
-        </button>
+    <button type="submit" class="btn btn-principal">
+        Enviar mensagem
+    </button>
 
-        <p id="mensagemStatus"></p>
+    <p id="mensagemStatus"></p>
 
-    </form>
+</form>
             </div>
             
         </section>
